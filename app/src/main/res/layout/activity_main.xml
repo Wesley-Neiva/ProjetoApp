@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_devocional"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
@@ -70,7 +70,7 @@
         android:textColor="@color/black"
         android:textColorLink="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_devocional"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_devocional"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
@@ -125,7 +125,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/btn_devocional"
         app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
