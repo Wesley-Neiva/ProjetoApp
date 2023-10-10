@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="400dp"
+        android:backgroundTint="?attr/colorTertiaryFixed"
+        android:text="Consultas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_exercicios"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="400dp"
+        android:backgroundTint="?attr/colorTertiaryFixed"
+        android:text="Estudos"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_inicio"
+        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="600dp"
+        android:background="#F3EDED"
+        android:text="VIDA SAUDÁVEL"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <Button
+        android:id="@+id/btn_exercicios"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="500dp"
+        android:backgroundTint="?attr/colorTertiaryFixed"
+        android:text="Exercícios \n Semanais"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="400dp"
+        android:backgroundTint="?attr/colorTertiaryFixed"
+        android:backgroundTintMode="src_in"
+        android:text="Estudo \n de Idiomas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="500dp"
+        android:backgroundTint="?attr/colorTertiaryFixed"
+        android:text="Devocional"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_exercicios"
+        app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="500dp"
+        android:backgroundTint="?attr/colorTertiaryFixed"
+        android:text="Agendas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
