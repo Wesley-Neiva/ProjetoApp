@@ -8,7 +8,7 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
 
     lateinit var btnExercicios: Button
-    //lateinit var btnDevocional: Button
+    lateinit var btnDevocional: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,17 +20,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(
                 this, Exercicois_Activity::class.java
             )
-
+            startActivity(intent)
 
         }
-        /*btnDevocional = findViewById(R.id.btn_devocional)
+        btnDevocional = findViewById(R.id.btn_devocional)
         btnDevocional.setOnClickListener {
-            val intent1 = Intent(
+            val intent = Intent(
                 this, Devocional_Activity::class.java)
+            startActivity(intent)
 
-        }*/
+        }
 
-        startActivity(intent)
 
 
     }

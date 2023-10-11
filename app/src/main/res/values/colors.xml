@@ -5,9 +5,9 @@
 
     <!--Cores primarias-->
 
-    <color name="color_primaria">#FD00FF</color>
-    <color name="variante_primaria">#FD00FF</color>
-    <color name="color_segundaria">#FD00FF</color>
-    <color name="fundo">#A10165</color>
+    <color name="color_primaria">#cc6761</color>
+    <color name="variante_primaria">#f5cef6</color>
+    <color name="color_segundaria">#a0d490</color>
+    <color name="fundo">#cc6761</color>
 
 </resources>
