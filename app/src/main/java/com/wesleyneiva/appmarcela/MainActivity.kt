@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnExercicios: Button
     lateinit var btnDevocional: Button
     lateinit var btnAgenda: Button
+    lateinit var btnConsulta: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +41,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        btnConsulta = findViewById(R.id.btn_consulta)
+        btnConsulta.setOnClickListener {
+            val intent = Intent(
+                this, Consulta_Activity::class.java
+            )
+            startActivity(intent)
+        }
 
     }
 }

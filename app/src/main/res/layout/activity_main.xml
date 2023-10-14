@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/fundo" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_consulta"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
@@ -55,7 +55,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/btn_consulta"
         app:layout_constraintTop_toBottomOf="@+id/btn_devocional"
         app:layout_constraintVertical_bias="0.5" />
 
