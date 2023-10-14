@@ -35,14 +35,14 @@
         android:textColor="@color/black"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/btn_estudar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_exercicios"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_estudar"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
@@ -111,14 +111,14 @@
         android:layout_marginBottom="400dp"
         android:backgroundTint="@color/color_primaria"
         android:backgroundTintMode="src_in"
-        android:text="Estudo \n de Idiomas"
+        android:text="Idiomas"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintStart_toEndOf="@+id/btn_estudar"
         app:layout_constraintTop_toBottomOf="@+id/btn_agenda"
         app:layout_constraintVertical_bias="0.5" />
 

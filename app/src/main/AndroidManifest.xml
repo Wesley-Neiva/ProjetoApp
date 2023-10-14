@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppMarcela"
         tools:targetApi="31">
         <activity
+            android:name=".Estudo_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Consulta_Activity"
             android:exported="false" />
         <activity
