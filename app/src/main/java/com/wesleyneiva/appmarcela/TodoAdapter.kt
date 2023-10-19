@@ -10,6 +10,7 @@ class TodoAdapter(
     var todos: List<Todo>
 ): RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
+
     inner class TodoViewHolder(itemView: View): RecyclerView.ViewHolder(
         itemView
     )
@@ -24,7 +25,16 @@ class TodoAdapter(
     }
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
+
+
         holder.itemView.apply {
+            (R.id.tvTitle)
+            (R.id.cbDone)
+
+
+            todos[position].title
+            todos[position].isChecked
+
 
 
         }
