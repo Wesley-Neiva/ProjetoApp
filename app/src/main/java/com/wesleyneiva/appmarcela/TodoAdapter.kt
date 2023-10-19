@@ -3,6 +3,8 @@ package com.wesleyneiva.appmarcela
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
+import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -12,8 +14,10 @@ class TodoAdapter(
 
 
     inner class TodoViewHolder(itemView: View): RecyclerView.ViewHolder(
-        itemView
-    )
+        itemView){
+        val tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
+        val cbDone: CheckBox = itemView.findViewById(R.id.cbDone)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_todo, parent,false)
@@ -26,20 +30,16 @@ class TodoAdapter(
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
 
-
-        holder.itemView.apply {
-            (R.id.tvTitle)
-            (R.id.cbDone)
-
-
-            todos[position].title
-            todos[position].isChecked
+        val mensagem =todos[position]
+        holder.tvTitle.text = mensagem.title
+        holder.cbDone.isChecked = mensagem.isChecked
 
 
 
         }
 
-    }
+        }
 
 
-}
+
+
