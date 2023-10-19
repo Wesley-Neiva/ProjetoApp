@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnAgenda: Button
     lateinit var btnConsulta: Button
     lateinit var btnEstudar: Button
+    lateinit var btnIdioamas: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +58,14 @@ class MainActivity : AppCompatActivity() {
             )
             startActivity(intent)
          }
+
+        btnIdioamas = findViewById(R.id.btn_idioma)
+        btnIdioamas.setOnClickListener {
+            val intent = Intent(
+                this, Activity_idiomas::class.java
+            )
+            startActivity(intent)
+        }
 
     }
 }
