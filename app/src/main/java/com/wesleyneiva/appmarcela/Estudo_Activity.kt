@@ -14,16 +14,12 @@ import androidx.recyclerview.widget.RecyclerView
 class Estudo_Activity : AppCompatActivity() {
 
 
-
-
     lateinit var botaoEstudoVoltar: Button
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudo)
-
 
 
 

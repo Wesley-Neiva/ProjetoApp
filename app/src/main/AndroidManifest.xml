@@ -19,7 +19,7 @@
             android:name=".Estudo_Activity"
             android:exported="false" />
         <activity
-            android:name=".Consulta_Activity"
+            android:name=".Livros_Activity"
             android:exported="false" />
         <activity
             android:name=".Agenda_activity"

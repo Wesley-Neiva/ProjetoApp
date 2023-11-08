@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         btnConsulta = findViewById(R.id.btn_consulta)
         btnConsulta.setOnClickListener {
             val intent = Intent(
-                this, Consulta_Activity::class.java
+                this, Livros_Activity::class.java
             )
             startActivity(intent)
         }

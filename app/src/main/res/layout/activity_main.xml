@@ -11,17 +11,6 @@
 
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fundo" />
-
-    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +27,7 @@
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/color_primaria"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -46,19 +35,18 @@
         app:icon="@drawable/ic_font_download_24"
         app:iconSize="65dp"
         app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_idioma"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_consulta"
-        app:layout_constraintTop_toBottomOf="@+id/btn_devocional"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_consulta"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/btn_idioma"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/color_primaria"
         android:backgroundTintMode="src_in"
         android:textAlignment="center"
@@ -67,19 +55,35 @@
         app:icon="@drawable/ic_outlined_flag_24"
         app:iconSize="65dp"
         app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/btn_devocional"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="@color/color_primaria"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:textStyle="bold|italic"
+        app:icon="@drawable/baseline_synagogue_24"
+        app:iconSize="65dp"
+        app:iconTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btn_agenda"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_estudar"
-        app:layout_constraintTop_toBottomOf="@+id/btn_agenda"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/btn_exercicios"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_consulta"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="@color/color_primaria"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -87,40 +91,15 @@
         app:icon="@drawable/ic_book_24"
         app:iconSize="65dp"
         app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_estudar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_exercicios"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/btn_inicio"
-        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Tertiary"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="600dp"
-        android:backgroundTint="@color/material_dynamic_tertiary80"
-        android:backgroundTintMode="src_in"
-        android:text="PLANNER"
-        android:textColor="@color/color_primaria"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_idioma"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
         android:id="@+id/btn_exercicios"
         style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
         android:layout_width="94dp"
         android:layout_height="83dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="124dp"
         android:backgroundTint="@color/color_primaria"
         android:fontFamily="sans-serif"
         android:includeFontPadding="false"
@@ -133,35 +112,15 @@
         app:iconSize="65dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_devocional"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
-
-    <Button
-        android:id="@+id/btn_devocional"
-        style="@style/Widget.Material3.Button.IconButton.Filled"
-        android:layout_width="94dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/color_primaria"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="13dp"
-        android:textStyle="bold|italic"
-        app:icon="@drawable/baseline_synagogue_24"
-        app:iconSize="65dp"
-        app:iconTint="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/btn_agenda"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_exercicios"
-        app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_agenda"
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="94dp"
         android:layout_height="83dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="124dp"
         android:backgroundTint="@color/color_primaria"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -172,7 +131,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_devocional"
-        app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -233,6 +192,20 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_idioma"
         app:layout_constraintStart_toStartOf="@+id/btn_idioma"
         app:layout_constraintTop_toBottomOf="@+id/btn_idioma" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLANNER"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_devocional"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
