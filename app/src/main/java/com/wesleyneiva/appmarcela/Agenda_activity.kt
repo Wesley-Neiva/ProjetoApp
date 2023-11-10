@@ -16,11 +16,11 @@ import androidx.core.view.accessibility.AccessibilityViewCommand.SetTextArgument
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Calendar
+import java.util.Locale
 
 
 class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     TimePickerDialog.OnTimeSetListener {
-
 
     var day = 0
     var month = 0
@@ -80,7 +80,7 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         savedDay = dayOfMonth
-        savedMonth = month
+        savedMonth = month + 1
         savedYear = year
 
         getDateTimeCalendar()
@@ -96,7 +96,7 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
 
         horaTexto = findViewById(R.id.tvHoraTexto)
         horaTexto.text =
-            "$savedDay/$savedMonth/$savedYear\n$savedHour h:$savedMinute m"
+            "$savedDay/$savedMonth /$savedYear  $savedHour h:$savedMinute min"
 
     }
 

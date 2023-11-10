@@ -2,32 +2,60 @@ package com.wesleyneiva.appmarcela
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.wesleyneiva.appmarcela.databinding.ActivityEstudoBinding
 
 
 class Estudo_Activity : AppCompatActivity() {
 
 
-    lateinit var botaoEstudoVoltar: Button
+    //private lateinit var binding: ActivityEstudoBinding
+   // lateinit var botaoEstudoVoltar: Button
+    private val binding by lazy {
+        ActivityEstudoBinding.inflate(layoutInflater)
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_estudo)
+        //binding = ActivityEstudoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        var todoList = mutableListOf(
+            Todo("Portugês", false),
+            Todo("Treinamento de inglês por meia hora", false),
+            Todo("Estudar Programação ", false),
+
+
+        )
+        val adapter = TodoAdapter(todoList)
+        binding.rvTodos.adapter = adapter
+        binding.rvTodos.layoutManager = LinearLayoutManager(this)
+
+        binding.btnAddTodo.setOnClickListener {
+            val title = binding.etTodo.text.toString()
+            val todo = Todo(title, false)
+            todoList.add(todo)
+            adapter.notifyItemInserted(todoList.size - 1)
 
 
 
+
+
+        }
+
+
+        binding.btnEstudarVoltar.setOnClickListener {
+            finish()
+        }
+
+
+/*
         botaoEstudoVoltar = findViewById(R.id.btn_estudar_voltar)
         val bundle = intent.extras
 
         botaoEstudoVoltar.setOnClickListener {
             finish()
-        }
+        }*/
     }
 }

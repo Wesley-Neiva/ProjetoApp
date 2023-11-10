@@ -8,6 +8,7 @@
         <item name="android:windowBackground">@drawable/fundo</item>
 
 
+
     </style>
 
     <style name="Theme.AppMarcela" parent="Base.Theme.AppMarcela" />
