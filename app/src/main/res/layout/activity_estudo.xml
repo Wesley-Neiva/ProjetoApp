@@ -23,14 +23,14 @@
 
     <Button
         android:id="@+id/btnEstudarVoltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="92dp"
+        android:layout_height="45dp"
         android:layout_marginTop="4dp"
         android:shadowColor="#0C0A0A"
         android:text="Voltar"
         app:layout_constraintBottom_toTopOf="@+id/btnAddTodo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvTodos"
         app:layout_constraintVertical_bias="1.0" />
@@ -69,13 +69,14 @@
 
     <Button
         android:id="@+id/btnAddTodo"
-        android:layout_width="118dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="92dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="28dp"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etTodo" />
+        app:layout_constraintTop_toTopOf="@+id/etTodo"
+        app:layout_constraintVertical_bias="0.483" />
 
     <ImageView
         android:id="@+id/imageView"
