@@ -32,6 +32,7 @@
         android:layout_width="85dp"
         android:layout_height="46dp"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/black"
         android:text="Deletar"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"

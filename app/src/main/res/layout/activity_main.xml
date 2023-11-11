@@ -140,6 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Exercícios"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_exercicios"
         app:layout_constraintStart_toStartOf="@+id/btn_exercicios"
         app:layout_constraintTop_toBottomOf="@+id/btn_exercicios" />
@@ -150,6 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Devocional"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_devocional"
         app:layout_constraintStart_toStartOf="@+id/btn_devocional"
         app:layout_constraintTop_toBottomOf="@+id/btn_devocional" />
@@ -160,6 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Agenda"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_agenda"
         app:layout_constraintStart_toStartOf="@+id/btn_agenda"
         app:layout_constraintTop_toBottomOf="@+id/btn_agenda" />
@@ -170,6 +173,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Livros"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_consulta"
         app:layout_constraintStart_toStartOf="@+id/btn_consulta"
         app:layout_constraintTop_toBottomOf="@+id/btn_consulta" />
@@ -180,6 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Estudo"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_estudar"
         app:layout_constraintStart_toStartOf="@+id/btn_estudar"
         app:layout_constraintTop_toBottomOf="@+id/btn_estudar" />
@@ -190,6 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Idiomas"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btn_idioma"
         app:layout_constraintStart_toStartOf="@+id/btn_idioma"
         app:layout_constraintTop_toBottomOf="@+id/btn_idioma" />
@@ -197,8 +203,11 @@
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PLANNER"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="PLANNER MARCELA REGINA"
+        android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_devocional"

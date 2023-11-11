@@ -9,14 +9,28 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-
-
 class TodoAdapter(
-    var todos: List<Todo>
-) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>(){
+    var todos: MutableList<Todo>
+) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
-    inner class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
+    inner class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val btnDelete: Button = itemView.findViewById(R.id.btnDelete)
+
+        init {
+            // Configurar o clique do botão de exclusão
+            btnDelete.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    // Remover o item da lista
+                    todos.removeAt(position)
+                    // Notificar o adaptador sobre a remoção
+                    notifyItemRemoved(position)
+                }
+            }
+        }
+
+    }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
@@ -32,7 +46,6 @@ class TodoAdapter(
         with(holder.itemView) {
             findViewById<TextView>(R.id.tvTitle).text = todos[position].title
             findViewById<CheckBox>(R.id.cbDone).isChecked = todos[position].isChecked
-
 
 
         }

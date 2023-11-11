@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AppMarcela</string>
     <string name="texto_agenda">Data:</string>
-    <string name="tema_livros">Relação de livros para serem lidos:</string>
+    <string name="tema_livros">Relação de livros para serem lidos</string>
 
 
 </resources>
