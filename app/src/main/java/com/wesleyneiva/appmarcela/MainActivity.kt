@@ -1,67 +1,70 @@
 package com.wesleyneiva.appmarcela
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var btnExercicios: Button
-    lateinit var btnDevocional: Button
-    lateinit var btnAgenda: Button
-    lateinit var btnConsulta: Button
-    lateinit var btnEstudar: Button
-    lateinit var btnIdioamas: Button
+    lateinit var cvExercicios: CardView
+    lateinit var cvDevocional: CardView
+    lateinit var cvAgenda: CardView
+    lateinit var cvEstudo: CardView
+    lateinit var cvLivro: CardView
+    lateinit var cvIdioamas: CardView
 
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnExercicios = findViewById(R.id.btn_exercicios)
-        btnExercicios.setOnClickListener {
+        cvExercicios = findViewById(R.id.cvExercicios)
+        cvExercicios.setOnClickListener {
             val intent = Intent(
                 this, Exercicois_Activity::class.java
             )
             startActivity(intent)
 
         }
-        btnDevocional = findViewById(R.id.btn_devocional)
-        btnDevocional.setOnClickListener {
+        cvDevocional = findViewById(R.id.cvDevocional)
+        cvDevocional.setOnClickListener {
             val intent = Intent(
                 this, Devocional_Activity::class.java)
             startActivity(intent)
 
         }
 
-        btnAgenda = findViewById(R.id.btn_agenda)
-        btnAgenda.setOnClickListener {
+       cvAgenda = findViewById(R.id.cvAgenda)
+        cvAgenda.setOnClickListener {
             val intent = Intent(
                 this, Agenda_activity::class.java
             )
             startActivity(intent)
         }
 
-        btnConsulta = findViewById(R.id.btn_consulta)
-        btnConsulta.setOnClickListener {
-            val intent = Intent(
-                this, Livros_Activity::class.java
-            )
-            startActivity(intent)
-        }
-
-        btnEstudar = findViewById(R.id.btn_estudar)
-        btnEstudar.setOnClickListener {
+       cvEstudo = findViewById(R.id.cvEstudo)
+        cvEstudo.setOnClickListener {
             val intent = Intent(
                 this, Estudo_Activity::class.java
             )
             startActivity(intent)
+        }
+
+        cvLivro = findViewById(R.id.cvLivro)
+        cvLivro.setOnClickListener {
+            val intent = Intent(
+                this, Livros_Activity::class.java
+            )
+            startActivity(intent)
          }
 
-        btnIdioamas = findViewById(R.id.btn_idioma)
-        btnIdioamas.setOnClickListener {
+       cvIdioamas = findViewById(R.id.cvIdioma)
+        cvIdioamas.setOnClickListener {
             val intent = Intent(
                 this, Activity_idiomas::class.java
             )

@@ -7,7 +7,9 @@
         android:startColor="@color/purple_01"
         android:centerColor="@color/purple_03"
         android:endColor="@color/purple_02"
-        android:angle="360
+        android:angle="380
+
+
 "
         >
 

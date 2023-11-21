@@ -2,6 +2,19 @@
     <string name="app_name">AppMarcela</string>
     <string name="texto_agenda">Data:</string>
     <string name="tema_livros">Relação de livros para serem lidos</string>
+    <string name="exercicios">Exercicios</string>
+    <string name="devocional">Devocional</string>
+    <string name="agenda">Agenda</string>
+    <string name="estudo">Estudo</string>
+    <string name="Idiomas">Idiomas</string>
+    <string name="livros">Livros</string>
+
+    <string name="texto_tela_inicio">
+
+        <p>Organize sua vida pessoal com ajuda de um planner.</p>
+
+    </string>
+    
 
 
 </resources>

@@ -40,6 +40,7 @@ class Estudo_Activity : AppCompatActivity() {
             val todo = Todo(title, false)
             todoList.add(todo)
             adapter.notifyItemInserted(todoList.size - 1)
+            binding.etTodo.setText("") //limpar a tela ao digitar um número
 
         }
 
