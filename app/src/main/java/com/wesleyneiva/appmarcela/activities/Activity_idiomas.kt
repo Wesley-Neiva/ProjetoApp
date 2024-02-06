@@ -1,8 +1,9 @@
-package com.wesleyneiva.appmarcela
+package com.wesleyneiva.appmarcela.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.wesleyneiva.appmarcela.R
 
 
 class Activity_idiomas : AppCompatActivity() {

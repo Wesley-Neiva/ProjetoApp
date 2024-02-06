@@ -1,4 +1,4 @@
-package com.wesleyneiva.appmarcela
+package com.wesleyneiva.appmarcela.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.wesleyneiva.appmarcela.R
+import com.wesleyneiva.appmarcela.model.Todo
 
 
 class TodoAdapter(

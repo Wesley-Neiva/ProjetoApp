@@ -1,11 +1,11 @@
-package com.wesleyneiva.appmarcela
+package com.wesleyneiva.appmarcela.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.wesleyneiva.appmarcela.R
 
 class MainActivity : AppCompatActivity() {
 

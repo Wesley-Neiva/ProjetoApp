@@ -1,24 +1,16 @@
-package com.wesleyneiva.appmarcela
+package com.wesleyneiva.appmarcela.activities
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
-import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.widget.Button
 import android.widget.DatePicker
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.TimePicker
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.accessibility.AccessibilityViewCommand.SetTextArguments
-import androidx.fragment.app.DialogFragment
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import com.wesleyneiva.appmarcela.databinding.ActivityAgendaBinding
 import java.util.Calendar
-import java.util.Locale
-
 
 
 class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
@@ -37,25 +29,40 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     var savedMinute = 0
 
 
-    lateinit var botaoAgendaVoltar: Button
-    lateinit var botaoMarqueDia: Button
-    lateinit var horaTexto: TextView
+    lateinit var editTextAgenda: EditText
+    lateinit var resultado: TextView
 
+    private val binding by lazy {
+        ActivityAgendaBinding.inflate(layoutInflater)
+    }
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_agenda)
+        setContentView(binding.root)
 
         pickDate()
 
 
-        botaoAgendaVoltar = findViewById(R.id.btn_agenda_voltar)
-
-        intent.extras
-
-        botaoAgendaVoltar.setOnClickListener {
+        binding.btnAgendaVoltar.setOnClickListener {
             finish()
 
         }
+
+        binding.btnExecutarAgenda.setOnClickListener {
+            definirAgenda()
+        }
+
+
+
+    }
+
+    private fun definirAgenda() {
+        val marcarAgenda = binding.editTextAgenda.text.toString()
+        binding.textResultadoAgenda.text = marcarAgenda
+
+        binding.editTextAgenda.text?.clear()
+
     }
 
     fun getDateTimeCalendar() {
@@ -68,8 +75,8 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     }
 
     fun pickDate() {
-        botaoMarqueDia = findViewById(R.id.btnMarcarDia)
-        botaoMarqueDia.setOnClickListener {
+
+        binding.btnMarcarDia.setOnClickListener {
 
             getDateTimeCalendar()
 
@@ -95,8 +102,8 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         savedHour = hourOfDay
         savedMinute = minute
 
-        horaTexto = findViewById(R.id.tvHoraTexto)
-        horaTexto.text =
+
+        binding.tvHoraTexto.text =
             "$savedDay/$savedMonth /$savedYear  $savedHour h:$savedMinute min"
 
     }

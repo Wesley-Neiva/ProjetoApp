@@ -1,10 +1,11 @@
-package com.wesleyneiva.appmarcela
+package com.wesleyneiva.appmarcela.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.wesleyneiva.appmarcela.adapter.TodoAdapter
 import com.wesleyneiva.appmarcela.databinding.ActivityEstudoBinding
+import com.wesleyneiva.appmarcela.model.Todo
 
 
 class Estudo_Activity : AppCompatActivity() {
