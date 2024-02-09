@@ -3,7 +3,6 @@ package com.wesleyneiva.appmarcela.activities
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.wesleyneiva.appmarcela.R
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var cvEstudo: CardView
     lateinit var cvLivro: CardView
     lateinit var cvIdioamas: CardView
-    lateinit var tbPrincipal: Toolbar
+
 
 
 

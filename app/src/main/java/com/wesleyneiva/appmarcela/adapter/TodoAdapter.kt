@@ -40,9 +40,7 @@ class TodoAdapter(
         return TodoViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return todos.size
-    }
+
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         with(holder.itemView) {
@@ -53,6 +51,10 @@ class TodoAdapter(
         }
 
 
+    }
+
+    override fun getItemCount(): Int {
+        return todos.size
     }
 
 

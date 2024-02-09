@@ -11,8 +11,6 @@ import com.wesleyneiva.appmarcela.model.Todo
 class Estudo_Activity : AppCompatActivity() {
 
 
-    //private lateinit var binding: ActivityEstudoBinding
-    // lateinit var botaoEstudoVoltar: Button
     private val binding by lazy {
         ActivityEstudoBinding.inflate(layoutInflater)
     }
@@ -20,13 +18,14 @@ class Estudo_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //binding = ActivityEstudoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        inicializarToolbar()
 
         var todoList = mutableListOf(
             Todo("Portugês", false),
-            Todo("Treinamento de inglês por meia hora", false),
-            Todo("Estudar Programação ", false),
+            Todo("Treinamento de inglês", false),
+
 
 
             )
@@ -46,19 +45,15 @@ class Estudo_Activity : AppCompatActivity() {
         }
 
 
+    }
 
-
-        binding.btnEstudarVoltar.setOnClickListener {
-            finish()
+    private fun inicializarToolbar() {
+        val toolbar = binding.includeToolbarEstudos.tbPrincipal
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Voltar"
+            setDisplayHomeAsUpEnabled(true)
         }
 
-
-        /*
-                botaoEstudoVoltar = findViewById(R.id.btn_estudar_voltar)
-                val bundle = intent.extras
-
-                botaoEstudoVoltar.setOnClickListener {
-                    finish()
-                }*/
     }
 }

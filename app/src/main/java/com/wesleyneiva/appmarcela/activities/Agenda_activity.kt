@@ -36,19 +36,25 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        inicializarToolbar()
         pickDate()
 
 
-        binding.btnAgendaVoltar.setOnClickListener {
-            finish()
-
-        }
 
         binding.btnExecutarAgenda.setOnClickListener {
             definirAgenda()
         }
 
 
+    }
+
+    private fun inicializarToolbar() {
+        val toolbar = binding.includeToolbarAgenda.tbPrincipal
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Voltar"
+            setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     private fun definirAgenda() {

@@ -1,25 +1,31 @@
 package com.wesleyneiva.appmarcela.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.wesleyneiva.appmarcela.R
+import androidx.appcompat.app.AppCompatActivity
+import com.wesleyneiva.appmarcela.databinding.ActivityExercicoisBinding
 
 class Exercicois_Activity : AppCompatActivity() {
 
-        lateinit var botaoExercicioVoltar: Button
+        private val binding by lazy {
+            ActivityExercicoisBinding.inflate(layoutInflater)
+        }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_exercicois)
+        setContentView(binding.root)
 
-        botaoExercicioVoltar =findViewById(R.id.btn_exercicios_voltar)
+        inicializarToolbar()
 
-        val bundle = intent.extras
 
-        botaoExercicioVoltar.setOnClickListener {
-            finish()
+    }
+
+    private fun inicializarToolbar() {
+        val toolbar = binding.includeToolbarExercicios.tbPrincipal
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Voltar"
+            setDisplayHomeAsUpEnabled(true)
         }
     }
 }

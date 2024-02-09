@@ -16,10 +16,19 @@ class Activity_idiomas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        iniciarToolbar()
 
-        binding.btnVoltarIdioma.setOnClickListener {
-            finish()
+
+
+
+    }
+
+    private fun iniciarToolbar() {
+        val toolbar = binding.includeToolbarIdiomas.tbPrincipal
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Voltar"
+            setDisplayHomeAsUpEnabled(true)
         }
-
     }
 }

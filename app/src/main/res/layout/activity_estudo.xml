@@ -7,17 +7,38 @@
     android:scrollbarSize="@dimen/material_emphasis_disabled"
     tools:context=".activities.Estudo_Activity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <include
+        android:id="@+id/includeToolbarEstudos"
+        layout="@layout/toolbar_customizada"
         android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddTodo"
+        android:layout_width="92dp"
+        android:layout_height="45dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etTodo"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="377dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeToolbarEstudos"
         app:srcCompat="@drawable/estudos" />
 
     <TextView
@@ -27,7 +48,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:shadowColor="#0E0B0B"
-        android:text="Hora de estudar"
+        android:text="Estudos Diários"
         android:textColorHint="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,18 +56,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-
-    <Button
-        android:id="@+id/btnEstudarVoltar"
-        android:layout_width="92dp"
-        android:layout_height="45dp"
-        android:shadowColor="#0C0A0A"
-        android:text="Voltar"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddTodo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvTodos" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTodos"
@@ -72,18 +81,6 @@
         app:layout_constraintEnd_toStartOf="@+id/btnAddTodo"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnAddTodo"
-        android:layout_width="92dp"
-        android:layout_height="45dp"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etTodo"
-        app:layout_constraintVertical_bias="0.483" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
