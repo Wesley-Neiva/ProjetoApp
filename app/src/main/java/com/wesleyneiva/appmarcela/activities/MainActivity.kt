@@ -3,11 +3,17 @@ package com.wesleyneiva.appmarcela.activities
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.wesleyneiva.appmarcela.R
+import com.wesleyneiva.appmarcela.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
     lateinit var cvExercicios: CardView
     lateinit var cvDevocional: CardView
@@ -15,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var cvEstudo: CardView
     lateinit var cvLivro: CardView
     lateinit var cvIdioamas: CardView
+    lateinit var tbPrincipal: Toolbar
 
 
 
@@ -36,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(
                 this, Devocional_Activity::class.java)
             startActivity(intent)
+
 
         }
 
@@ -72,4 +80,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
 }

@@ -20,12 +20,14 @@
             android:exported="false" />
         <activity
             android:name=".activities.Livros_Activity"
+            android:parentActivityName=".activities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".activities.Agenda_activity"
             android:exported="false" />
         <activity
             android:name=".activities.Devocional_Activity"
+            android:parentActivityName=".activities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".activities.Exercicois_Activity"

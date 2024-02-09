@@ -5,8 +5,6 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
 import android.widget.DatePicker
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
 import com.wesleyneiva.appmarcela.databinding.ActivityAgendaBinding
@@ -29,9 +27,6 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
     var savedMinute = 0
 
 
-    lateinit var editTextAgenda: EditText
-    lateinit var resultado: TextView
-
     private val binding by lazy {
         ActivityAgendaBinding.inflate(layoutInflater)
     }
@@ -52,7 +47,6 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         binding.btnExecutarAgenda.setOnClickListener {
             definirAgenda()
         }
-
 
 
     }

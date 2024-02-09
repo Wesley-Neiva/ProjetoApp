@@ -1,24 +1,31 @@
 package com.wesleyneiva.appmarcela.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.wesleyneiva.appmarcela.R
+import androidx.appcompat.app.AppCompatActivity
+import com.wesleyneiva.appmarcela.databinding.ActivityLivrosBinding
 
 class Livros_Activity : AppCompatActivity() {
 
-    lateinit var botaoConsultaVoltar:Button
+    private val binding by lazy {
+        ActivityLivrosBinding.inflate(layoutInflater)
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_livros)
+        setContentView(binding.root)
 
-        botaoConsultaVoltar = findViewById(R.id.btn_voltar_consulta)
+        inicializarToolbar()
 
-        val bundle = intent.extras
 
-        botaoConsultaVoltar.setOnClickListener {
-            finish()
+    }
+
+    private fun inicializarToolbar() {
+        val toolbar = binding.includeToolbarLivro.tbPrincipal
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Voltar"
+            setDisplayHomeAsUpEnabled(true)
         }
     }
 }

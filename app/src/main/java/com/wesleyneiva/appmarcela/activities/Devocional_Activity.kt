@@ -1,28 +1,35 @@
 package com.wesleyneiva.appmarcela.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import com.wesleyneiva.appmarcela.R
+import androidx.appcompat.app.AppCompatActivity
+import com.wesleyneiva.appmarcela.databinding.ActivityDevocionalBinding
 
 class Devocional_Activity : AppCompatActivity() {
 
 
-        lateinit var botaoVoltarDevocional: Button
+
+        private val binding by lazy {
+            ActivityDevocionalBinding.inflate(layoutInflater)
+        }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_devocional)
+        setContentView(binding.root)
 
-        botaoVoltarDevocional = findViewById(R.id.btn_devocional_voltar)
+        inicializarToolbar()
 
-        val bundle = intent.extras
 
-        botaoVoltarDevocional.setOnClickListener {
-            finish()
+
+
+    }
+
+    private fun inicializarToolbar() {
+        val toolbar = binding.includeToolbarDevocional.tbPrincipal
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            title = "Voltar"
+            setDisplayHomeAsUpEnabled(true)
         }
-
-
     }
 }

@@ -1,24 +1,23 @@
 package com.wesleyneiva.appmarcela.activities
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.wesleyneiva.appmarcela.R
+import com.wesleyneiva.appmarcela.databinding.ActivityIdiomasBinding
 
 
 class Activity_idiomas : AppCompatActivity() {
 
-    lateinit var botaoIdiomaVoltar: Button
+
+    private val binding by lazy {
+        ActivityIdiomasBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_idiomas)
+        setContentView(binding.root)
 
 
-        botaoIdiomaVoltar = findViewById(R.id.btn_voltar_idioma)
-        val bundle = intent.extras
-
-        botaoIdiomaVoltar.setOnClickListener {
+        binding.btnVoltarIdioma.setOnClickListener {
             finish()
         }
 
