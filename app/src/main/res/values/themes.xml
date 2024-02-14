@@ -1,12 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.AppMarcela" parent="Theme.Material3.DayNight.NoActionBar">
+
+
+
         <!-- Customize your light theme here. -->
+        <item name="colorPrimaryDark">@color/fundo</item>
+
+
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/color_primaria</item>
         <item name="colorPrimaryVariant">@color/color_primaria</item>
         <item name="android:windowBackground">@drawable/fundo</item>
-
 
 
     </style>

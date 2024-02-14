@@ -41,29 +41,17 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
 
 
 
-        binding.btnExecutarAgenda.setOnClickListener {
-            definirAgenda()
-        }
-
-
     }
 
     private fun inicializarToolbar() {
         val toolbar = binding.includeToolbarAgenda.tbPrincipal
         setSupportActionBar(toolbar)
         supportActionBar?.apply {
-            title = "Voltar"
+            title = ""
             setDisplayHomeAsUpEnabled(true)
         }
     }
 
-    private fun definirAgenda() {
-        val marcarAgenda = binding.editTextAgenda.text.toString()
-        binding.textResultadoAgenda.text = marcarAgenda
-
-        binding.editTextAgenda.text?.clear()
-
-    }
 
     fun getDateTimeCalendar() {
         val cal = Calendar.getInstance()
@@ -81,6 +69,12 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
             getDateTimeCalendar()
 
             DatePickerDialog(this, this, year, month, day).show()
+
+
+            val marcarAgenda = binding.editTextAgenda.text.toString()
+            binding.textTarefaCard.text = marcarAgenda
+
+            binding.editTextAgenda.text?.clear()
 
         }
 
@@ -103,7 +97,7 @@ class Agenda_activity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,
         savedMinute = minute
 
 
-        binding.tvHoraTexto.text =
+        binding.textDataCard.text =
             "$savedDay/$savedMonth /$savedYear  $savedHour h:$savedMinute min"
 
     }

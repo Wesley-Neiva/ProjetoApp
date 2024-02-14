@@ -24,7 +24,7 @@ class Estudo_Activity : AppCompatActivity() {
 
         var todoList = mutableListOf(
             Todo("Portugês", false),
-            Todo("Treinamento de inglês", false),
+            Todo("Matemática", false),
 
 
 

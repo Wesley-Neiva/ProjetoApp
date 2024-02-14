@@ -28,6 +28,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/cvExercicios"
         android:layout_width="180dp"
         android:layout_height="180dp"
@@ -77,6 +79,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/cvDevocional"
         android:layout_width="180dp"
         android:layout_height="180dp"
@@ -126,6 +130,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/cvAgenda"
         android:layout_width="180dp"
         android:layout_height="180dp"
@@ -170,6 +176,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/cvEstudo"
         android:layout_width="180dp"
         android:layout_height="180dp"
@@ -214,6 +222,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/cvLivro"
         android:layout_width="180dp"
         android:layout_height="180dp"
@@ -260,6 +270,8 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
         android:id="@+id/cvIdioma"
         android:layout_width="180dp"
         android:layout_height="180dp"
